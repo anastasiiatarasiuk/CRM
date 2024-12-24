@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '@/app/components/header';
 
 export default async function Page({
   params,
@@ -7,8 +6,8 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   return (
-    <>
-      <Header>Company ({(await params).id})</Header>
-    </>
+    <div className="py-6 px-10">
+      <p>{`Information about company (${(await params).id})`}</p>
+    </div>
   );
 }
